@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMKM Game Store - Survival</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .logo-box {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px; 
+            background-color: #0d161a;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-banner {
+            background: linear-gradient(135deg, #0f242b 0%, #0a181c 100%);
+            border: 1px solid #1a3c4a;
+            border-left: 4px solid #00b4d8;
+            border-radius: 5px;
+            padding: 25px;
+            margin-bottom: 35px;
+            color: #fff;
+        }
+
+        .featured-banner h2 {
+            font-size: 15px;
+            color: #00b4d8;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .featured-banner h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .featured-banner p {
+            color: var(--text-muted, #8b8ca7);
+            font-size: 14px;
+        }
+
+        .page-survival {
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+        }
+
+        .page-survival h1,
+        .page-survival h2,
+        .page-survival h3,
+        .page-survival .logo-text h1,
+        .page-survival .featured-banner h3,
+        .page-survival .game-info-box h3 {
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+        }
+
+        .page-survival .game-price-tag,
+        .page-survival .featured-banner p,
+        .page-survival .btn-detail {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body class="page-survival">
+    <div class="site-wrapper">
+        <header>
+            <div class="logo-area">
+                <div class="logo-box">
+                    <img src="img/logo-store/reze.jpg" alt="Infinity Games">
+                </div>
+                <div class="logo-text">
+                    <h1>Infinity Games</h1>
+                    <p>Koleksi Game Digital Terlengkap & Bebas Malware</p>
+                </div>
+            </div>        
+            <div class="header-right">
+                <a href="checkout.html" class="cart-button">🛒 Keranjang (0)</a>
+            </div>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="kategori-action.html">Action</a>
+            <a href="kategori-adventure.html">Adventure</a>
+            <a href="kategori-horror.html">Horror</a>
+            <a href="kategori-openworld.html">Open World</a>
+            <a href="kategori-survival.html" class="active">Survival</a>
+        </nav>
+
+        <div class="main-content">
+            <div class="featured-banner">
+                <h2>⛺ KATEGORI: SURVIVAL ⛺</h2>
+                <h3>Bertahan Hidup dari Segala Ancaman</h3>
+                <p>Kumpulkan sumber daya, bangun perlindungan, dan tetap hidup.</p>
+            </div>
+
+            <div class="section-title-bar">
+                <h2>DAFTAR GAME SURVIVAL</h2>
+            </div>
+
+            <div class="game-grid">
+                <a href="outlast.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/outlast.jpeg" alt="Outlast Trinity">
+                    </div>
+                    <div class="game-info-box"><h3>Outlast Trinity</h3><span class="game-price-tag">Rp 30.000</span></div>
+                </a>
+
+                <a href="green-hell.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/green-hell.jpeg" alt="Green Hell">
+                    </div>
+                    <div class="game-info-box"><h3>Green Hell</h3><span class="game-price-tag">Rp 35.000</span></div>
+                </a>
+
+                <a href="the-forest.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/the-forest.jpeg" alt="The Forest">
+                    </div>
+                    <div class="game-info-box"><h3>The Forest</h3><span class="game-price-tag">Rp 35.000</span></div>
+                </a>
+
+                <a href="sons-of-the-forest.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/son-of-the-forest.jpeg" alt="Sons of the Forest">
+                    </div>
+                    <div class="game-info-box"><h3>Sons of the Forest</h3><span class="game-price-tag">Rp 65.000</span></div>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Game Store Base. Dibuat murni menggunakan HTML & CSS standar perkuliahan.</p>
+        </footer>
+    </div>
+</body>
+</html>

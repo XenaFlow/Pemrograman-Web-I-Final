@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Games - Keranjang</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        .logo-box {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background-color: #0d161a;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-back {
+            display: inline-block;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            align-self: flex-start;
+            transition: color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            color: #00cccc;
+            text-decoration: underline;
+        }
+
+        .cart-title-bar {
+            background-color: #09151c;
+            padding: 15px 20px;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-cyan);
+            font-size: 18px;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            letter-spacing: 1px;
+        }
+
+        .cart-content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-grow: 1;
+        }
+
+        .cart-items-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cart-item-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: border-color 0.3s ease;
+        }
+
+        .cart-item-card:hover {
+            border-color: var(--accent-cyan);
+        }
+
+        .item-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-item-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .cart-item-detail h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+        }
+
+        .cart-item-price {
+            color: var(--accent-blue);
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .btn-hapus {
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-hapus:hover {
+            background-color: #cc0000;
+        }
+
+        .checkout-panel {
+            background-color: #09151c;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .checkout-title {
+            font-size: 16px;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .total-amount {
+            color: var(--accent-cyan);
+        }
+
+        .btn-checkout {
+            background-color: var(--accent-cyan);
+            color: #000000;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+        }
+
+        .btn-checkout:hover {
+            background-color: #00cccc;
+        }
+
+        .empty-cart {
+            color: var(--text-muted);
+            text-align: center;
+            padding: 40px 0;
+            font-size: 16px;
+        }
+
+        .empty-cart a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .empty-cart a:hover {
+            text-decoration: underline;
+        }
+
+        .cart-item-detail h4 {
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+        }
+    </style>
+</head>
+<body class="page-payment">
+    <div class="site-wrapper">
+        <header>
+            <div class="logo-area">
+                <div class="logo-box">
+                    <img src="img/logo-store/reze.jpg" alt="Infinity Games">
+                </div>
+                <div class="logo-text">
+                    <h1>Infinity Games</h1>
+                    <p>Koleksi Game Digital Terlengkap & Bebas Malware</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="checkout.html" class="cart-button">🛒 Keranjang (<span id="cart-count">0</span>)</a>
+            </div>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="kategori-action.html">Action</a>
+            <a href="kategori-adventure.html">Adventure</a>
+            <a href="kategori-horror.html">Horror</a>
+            <a href="kategori-openworld.html">Open World</a>
+            <a href="kategori-survival.html">Survival</a>
+        </nav>
+
+        <div class="main-content">
+            <a href="index.html" class="btn-back">&larr; Kembali ke Beranda</a>
+            <div class="cart-title-bar">🛒 Keranjang Belanja Anda</div>
+
+            <div class="cart-content-wrapper">
+                <div class="cart-items-container" id="cart-list"></div>
+
+                <div class="checkout-panel">
+                    <div class="checkout-title">Ringkasan Belanja</div>
+                    <div class="total-row">
+                        <span>Total Bayar:</span>
+                        <span class="total-amount" id="total-price">Rp 0</span>
+                    </div>
+                    <a href="payment.html" class="btn-checkout">💳 Checkout Sekarang</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Game Store Base. Dibuat murni menggunakan HTML & CSS standar perkuliahan.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartList = document.getElementById('cart-list');
+            const totalPriceElement = document.getElementById('total-price');
+            
+            cartList.innerHTML = '';
+            let total = 0;
+
+            if (cart.length === 0) {
+                cartList.innerHTML = `
+                    <div class="empty-cart">
+                        <p>🛒 Keranjang masih kosong.</p>
+                        <p style="margin-top: 10px;"><a href="index.html">Kembali ke Beranda</a></p>
+                    </div>
+                `;
+            } else {
+                cart.forEach((item, index) => {
+                    let priceNum = parseInt(item.price.replace(/[^0-9]/g, ''));
+                    total += priceNum;
+                    cartList.innerHTML += `
+                        <div class="cart-item-card">
+                            <div class="item-left">
+                                <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                                <div class="cart-item-detail">
+                                    <h4>${item.name}</h4>
+                                    <div class="cart-item-price">${item.price}</div>
+                                </div>
+                            </div>
+                            <button class="btn-hapus" onclick="removeItem(${index})">🗑️ Hapus</button>
+                        </div>
+                    `;
+                });
+            }
+            totalPriceElement.innerHTML = 'Rp ' + total.toLocaleString('id-ID');
+            updateCartCount();
+        }
+
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = document.getElementById('cart-count');
+            if (cartCount) {
+                cartCount.innerText = cart.length;
+            }
+        }
+
+        window.onload = function() {
+            loadCart();
+            updateCartCount();
+        };
+    </script>
+</body>
+</html>

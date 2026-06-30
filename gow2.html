@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God of War II Ragnarok - UMKM Game Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .logo-box {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background-color: #0d161a;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .game-detail-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .game-banner {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            margin-bottom: 25px;
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .game-title h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .game-genre {
+            display: flex;
+            gap: 10px;
+        }
+
+        .genre-tag {
+            background: #251c3d;
+            color: #ff9f43;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .game-price-large {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--accent-blue);
+        }
+
+        .section-block {
+            background: #151026;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .section-block h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--accent-cyan);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .screenshot-item {
+            width: 100%;
+            height: 160px;
+            background-color: #251c3d;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-item {
+            width: 100%;
+            height: 160px;
+            background-color: #251c3d;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .req-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .req-table th,
+        .req-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+
+        .req-table th {
+            color: var(--text-muted);
+            width: 30%;
+        }
+
+        .action-container {
+            background: #1b1233;
+            border: 2px solid var(--accent-cyan);
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn-cart {
+            background-color: var(--accent-cyan);
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-cart:hover {
+            background-color: #00cccc;
+        }
+    </style>
+</head>
+<body class="page-detail">
+    <div class="site-wrapper">
+        <header>
+            <div class="logo-area">
+                <div class="logo-box">
+                    <img src="img/logo-store/reze.jpg" alt="Infinity Games">
+                </div>
+                <div class="logo-text">
+                    <h1>Infinity Games</h1>
+                    <p>Koleksi Game Digital Terlengkap & Bebas Malware</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="checkout.html" class="cart-button">🛒 Keranjang (<span id="cart-count">0</span>)</a>
+            </div>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="kategori-action.html">Action</a>
+            <a href="kategori-adventure.html">Adventure</a>
+            <a href="kategori-horror.html">Horror</a>
+            <a href="kategori-openworld.html">Open World</a>
+            <a href="kategori-survival.html">Survival</a>
+        </nav>
+
+        <div class="game-detail-wrapper">
+            <div class="breadcrumb">
+                <a href="index.html">Beranda</a> > <a href="kategori-action.html">Action</a> > God of War II Ragnarok
+            </div>
+
+            <img src="img/god-of-war-2/banner/god-of-war-2-banner.jpg" alt="GOW Ragnarok Banner" class="game-banner">
+
+            <div class="game-header">
+                <div class="game-title">
+                    <h1>God of War II Ragnarok</h1>
+                    <div class="game-genre">
+                        <span class="genre-tag">Action</span>
+                    </div>
+                </div>
+                <div class="game-price-large">Rp 70.000</div>
+            </div>
+
+            <div class="section-block">
+                <h3>Deskripsi Game</h3>
+                <p>Kelanjutan dari perjalanan epik Kratos dan Atreus. Hadapi berbagai dewa mitologi Nordik dalam pertempuran untuk mencegah akhir dunia (Ragnarok).</p>
+            </div>
+
+            <div class="section-block">
+                <h3>Cuplikan Game (Screenshot & Video)</h3>
+                <div class="screenshot-grid">
+                    <div class="screenshot-item">
+                        <img src="img/god-of-war-2/screenshots/god-of-war-2-screenshots-1.jpg" alt="Screenshot 1">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="img/god-of-war-2/screenshots/god-of-war-2-screenshots-2.jpg" alt="Screenshot 2">
+                    </div>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="img/god-of-war-2/preview/god-of-war-2-preview.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>Spesifikasi PC (System Requirements)</h3>
+                <table class="req-table">
+                    <tr><th>OS</th><td>Windows 10/11 64-bit</td></tr>
+                    <tr><th>Processor</th><td>Intel i5-6600K / AMD Ryzen 5 2600</td></tr>
+                    <tr><th>Memory</th><td>16 GB RAM</td></tr>
+                    <tr><th>Graphics</th><td>NVIDIA RTX 2060 / AMD RX 5700</td></tr>
+                    <tr><th>Storage</th><td>150 GB ruang tersedia</td></tr>
+                </table>
+            </div>
+
+            <div class="action-container">
+                <p style="margin-bottom: 15px; font-size: 16px;">Tambahkan ke keranjang untuk memproses pesanan Anda.</p>
+                <button class="btn-cart" onclick="addToCart('God of War II Ragnarok', 'Rp 70.000', 'img/god-of-war-2/banner/god-of-war-2-banner.jpg')">➕ Masukkan ke Keranjang</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Game Store Base. Dibuat murni menggunakan HTML & CSS standar perkuliahan.</p>
+        </footer>
+    </div>
+
+    <script>
+        function addToCart(gameName, gamePrice, gameImage) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let newGame = { name: gameName, price: gamePrice, image: gameImage };
+            cart.push(newGame);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(gameName + ' berhasil ditambahkan ke keranjang!');
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-count').innerText = cart.length;
+        }
+
+        window.onload = updateCartCount;
+    </script>
+</body>
+</html>

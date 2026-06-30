@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMKM Game Store - Horror</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .logo-box {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px; 
+            background-color: #0d161a;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-banner {
+            background: linear-gradient(135deg, #0f242b 0%, #0a181c 100%);
+            border: 1px solid #1a3c4a;
+            border-left: 4px solid #00b4d8;
+            border-radius: 5px;
+            padding: 25px;
+            margin-bottom: 35px;
+            color: #fff;
+        }
+
+        .featured-banner h2 {
+            font-size: 15px;
+            color: #00b4d8;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .featured-banner h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .featured-banner p {
+            color: var(--text-muted, #8b8ca7);
+            font-size: 14px;
+        }
+
+        .page-horror {
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+        }
+
+        .page-horror h1,
+        .page-horror h2,
+        .page-horror h3,
+        .page-horror .logo-text h1,
+        .page-horror .featured-banner h3,
+        .page-horror .game-info-box h3 {
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+        }
+
+        .page-horror .game-price-tag,
+        .page-horror .featured-banner p,
+        .page-horror .btn-detail {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body class="page-horror">
+    <div class="site-wrapper">
+        <header>
+            <div class="logo-area">
+                <div class="logo-box">
+                    <img src="img/logo-store/reze.jpg" alt="Infinity Games">
+                </div>
+                <div class="logo-text">
+                    <h1>Infinity Games</h1>
+                    <p>Koleksi Game Digital Terlengkap & Bebas Malware</p>
+                </div>
+            </div>         
+            <div class="header-right">
+                <a href="checkout.html" class="cart-button">🛒 Keranjang (0)</a>
+            </div>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="kategori-action.html">Action</a>
+            <a href="kategori-adventure.html">Adventure</a>
+            <a href="kategori-horror.html" class="active">Horror</a>
+            <a href="kategori-openworld.html">Open World</a>
+            <a href="kategori-survival.html">Survival</a>
+        </nav>
+
+        <div class="main-content">
+            <div class="featured-banner">
+                <h2>👻 KATEGORI: HORROR 👻</h2>
+                <h3>Uji Nyali dan Hadapi Ketakutanmu</h3>
+                <p>Kumpulan game paling mencekam dan menegangkan.</p>
+            </div>
+
+            <div class="section-title-bar">
+                <h2>DAFTAR GAME HORROR</h2>
+            </div>
+
+            <div class="game-grid">
+                <a href="re3.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/resident-evil-3-remake.jpeg" alt="Resident Evil 3 Remake">
+                    </div>
+                    <div class="game-info-box"><h3>Resident Evil 3 Remake</h3><span class="game-price-tag">Rp 40.000</span></div>
+                </a>
+
+                <a href="re4.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/resident-evil-4-remake.jpeg" alt="Resident Evil 4 Remake">
+                    </div>
+                    <div class="game-info-box"><h3>Resident Evil 4 Remake</h3><span class="game-price-tag">Rp 60.000</span></div>
+                </a>
+
+                <a href="re2.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/resident-evil-2-remake.jpeg" alt="Resident Evil 2 Remake">
+                    </div>
+                    <div class="game-info-box"><h3>Resident Evil 2 Remake</h3><span class="game-price-tag">Rp 45.000</span></div>
+                </a>
+
+                <a href="re9.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/resident-evil-9-requiem.jpeg" alt="Resident Evil 9 Requiem">
+                    </div>
+                    <div class="game-info-box"><h3>Resident Evil 9 Requiem</h3><span class="game-price-tag">Rp 85.000</span></div>
+                </a>
+
+                <a href="sh2.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/silent-hill-2.jpeg" alt="Silent Hill 2">
+                    </div>
+                    <div class="game-info-box"><h3>Silent Hill 2</h3><span class="game-price-tag">Rp 65.000</span></div>
+                </a>
+
+                <a href="shf.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/silent-hill-f.jpeg" alt="Silent Hill f">
+                    </div>
+                    <div class="game-info-box"><h3>Silent Hill f</h3><span class="game-price-tag">Rp 75.000</span></div>
+                </a>
+
+                <a href="until-dawn.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/until-dawn.jpeg" alt="Until Dawn">
+                    </div>
+                    <div class="game-info-box"><h3>Until Dawn</h3><span class="game-price-tag">Rp 45.000</span></div>
+                </a>
+
+                <a href="dreadout2.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/dreadout-2.jpeg" alt="DreadOut 2">
+                    </div>
+                    <div class="game-info-box"><h3>DreadOut 2</h3><span class="game-price-tag">Rp 35.000</span></div>
+                </a>
+
+                <a href="outlast.html" class="game-card">
+                    <div class="game-thumb-box">
+                        <img src="img/outlast.jpeg" alt="Outlast">
+                    </div>
+                    <div class="game-info-box"><h3>Outlast</h3><span class="game-price-tag">Rp 30.000</span></div>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Game Store Base. Dibuat murni menggunakan HTML & CSS standar perkuliahan.</p>
+        </footer>
+    </div>
+</body>
+</html>
